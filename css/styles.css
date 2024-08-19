@@ -4,6 +4,8 @@
     --color-accent: #ff5500;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-borders: #ccc;
+    --border-radius:30px;
 
 }
 *,*::after, *::before {
@@ -234,8 +236,8 @@ badge--small {
 
 /*Inputs*/
 .input {
-    border-radius: 30px;
-    border: 1px solid  #ccc;
+    border-radius: var(--border-radius);
+    border: 1px solid  var(--color-borders);
     color: var(--color-headings);
     font-size: 2rem;
     outline: 0;
@@ -247,9 +249,28 @@ badge--small {
     color: #cddbc7;
 }
 
+/*Inputgroup*/
+.input-group {
+    border: 1px solid var(--color-borders);
+    border-radius: var(--border-radius);
+    display: flex;
+    padding: 1.5rem 1rem;
+
+}
+
+.input-group .input {
+    border: 0;
+    flex-grow: 1;
+}
+
+.input-group .btn {
+    margin: 4px;
+}
+
 @media screen and (min-width:1024px) {
     .input {
         font-size: 1.5rem;
     }
     
 }
+
